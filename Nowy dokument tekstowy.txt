@@ -1,6 +1,0 @@
-Mechanika:
-
-- Losowanie litery,
-- Licznik czasu oraz przycisk stop który zmniejsza czas do 10/15 sekund.
-- Tabela do wpisywania,
-- Poziomy trudności, 
