@@ -21,6 +21,7 @@ h1 {
 
 .game-table {
     height: 500px;
+    background-color: #343A40;
 }
 
 .player-list {
@@ -50,16 +51,37 @@ h1 {
     transition: background-color .2s ease-out;
 }
 
+#buttonLetter {
+    background: #d83f3f;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    font-family: Lato;
+    border-radius: 10px;
+    outline: none;
+    transition: background-color .2s ease-out;
+}
+
+#letter {
+    text-align: left;
+    color: rgba(255, 255, 255, .5);
+    font-size: 40px;
+}
+
 @media only screen and (min-width: 500px) {
     #start {
         top: 50%;
-    }  
+    }
 }
 
 @media only screen and (max-width: 499px) {
     #start {
         top: 70%;
-    }  
+    }
 }
 
 #start:hover {

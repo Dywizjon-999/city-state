@@ -1,18 +1,18 @@
 var thisLetter; // Random letter.
 
-var button = document.querySelector("input"); // Button radnom letter; VARIABLES; IMPORTANT;
+
 var start = document.querySelector("#start"); // Start time button;
 var readyTime = document.querySelector("#ready"); // Ready time button;
 
 function gameStart() {
     var hiddenDivs = document.querySelectorAll(".none");
-    
+
     hiddenDivs[0].style.position = "relative";
     hiddenDivs[1].style.position = "relative";
-    
+
     hiddenDivs[0].style.top = "auto";
     hiddenDivs[1].style.top = "auto";
-    
+
     start.style.display = "none";
 }
 
@@ -27,7 +27,10 @@ function randLetter() {
 
     var letterContainer = document.querySelector("#letter"); // Letter container;
 
-    letterContainer.innerHTML = thisLetter;
+    letterContainer.innerHTML = "Litera: " + thisLetter;
+    buttonLetter.style.display = "none";
+
+    timeStart();
 }
 
 function timeStart() {
@@ -39,7 +42,7 @@ function timeStart() {
 
     function t() {
         time--;
-        result.innerHTML = "<h1>Twój czas: " + time + "s</h1>";
+        result.innerHTML = "Twój czas: " + time + "s";
 
         if (time == 0) {
             clearInterval(timer);
@@ -55,4 +58,4 @@ function timeStart() {
 
 //start.addEventListener("click", timeStart); //Button time listener;
 start.addEventListener("click", gameStart);
-//button.addEventListener("click", randLetter); // Button letter listener; VARIABLES;
+buttonLetter.addEventListener("click", randLetter); // Button letter listener; VARIABLES;
