@@ -47,7 +47,8 @@
 
         <div class="row none">
             <div class="col-md-8 mt-4 offset-md-2">
-                <h1 class="time p-2" id="time">Twój czas: 90s</h1>
+                <h1 class="time p-2" id="time"><input type="button" id="buttonLetter" value="GOTOWY"></h1>
+                
             </div>
         </div>
         <div class="row mt-4 none">
@@ -55,7 +56,6 @@
             <div class="col-sm-8">
                 <div class="game-table">
                     <div id="letter" class="ml-3"></div>
-                    <input type="button" id="buttonLetter" class="ml-3 mt-3" value="GOTOWY">
                 </div>
 
             </div>

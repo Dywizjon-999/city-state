@@ -38,7 +38,9 @@ function timeStart() {
     var time = 90;
     var timer = setInterval(t, 1000);
 
-    readyTime.addEventListener('click', timeChange);
+    result.innerHTML = "Twój czas: " + time + "s";
+    
+    //readyTime.addEventListener('click', timeChange);
 
     function t() {
         time--;
@@ -57,5 +59,5 @@ function timeStart() {
 }
 
 //start.addEventListener("click", timeStart); //Button time listener;
-start.addEventListener("click", gameStart);
+start.addEventListener("click", gameStart); //Button start game listener;
 buttonLetter.addEventListener("click", randLetter); // Button letter listener; VARIABLES;
