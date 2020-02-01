@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
-    <link href="jumbotron.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,13 +21,12 @@
             </button>
 
             <div class="collapse navbar-collapse" id="mainmenu">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown ml-5">
+                <ul class="navbar-nav ml-auto mr-5">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Poziom trudności</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">ŁATWY</a>
                             <a class="dropdown-item" href="#">ŚREDNI</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">TRUDNY</a>
                             <a class="dropdown-item" href="#">OKURWA</a>
                         </div>
@@ -47,19 +45,12 @@
     </header>
     <div class="container-fluid">
 
-        <div class="row">
-            <div class="col-md-6 mt-4 offset-md-3">
-                <h1 class="time">Twój czas: 90s</h1>
+        <div class="row none">
+            <div class="col-md-8 mt-4 offset-md-2">
+                <h1 class="time p-2">Twój czas: 90s</h1>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-sm-6 mt-2">
-                <h1 class="letter">Wylosowana litera: K</h1>
-            </div>
-        </div>
-
-        <div class="row mt-2">
+        <div class="row mt-4 none">
 
             <div class="col-sm-8">
                 <h1 class="game-table">TABELA</h1>
@@ -68,6 +59,10 @@
             <div class="col-sm-4">
                 <h1 class="player-list">LISTA GRACZY</h1>
             </div>
+        </div>
+
+        <div class="row">
+            <input type="button" class="m-auto" id="start" value="Rozpocznij grę">
         </div>
 
     </div>
