@@ -1,7 +1,7 @@
 var thisLetter; // Random letter.
 
-
-var start = document.querySelector("#start"); // Start time button;
+var start = document.querySelector("#start"); // Start game button;
+var buttonLetter = document.querySelector("#buttonLetter"); // Start time button;
 var readyTime = document.querySelector("#ready"); // Ready time button;
 
 function gameStart() {
@@ -17,18 +17,20 @@ function gameStart() {
 }
 
 function randLetter() {
-
-    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "W", "Z"];
-
-    var l = letters.length; // Length table letter;
-    var r = parseInt(Math.random() * l); // Random number;
-
-    thisLetter = letters[r];
-
     var letterContainer = document.querySelector("#letter"); // Letter container;
-
-    letterContainer.innerHTML = "Litera: " + thisLetter;
-    buttonLetter.style.display = "none";
+    
+    $.ajax({
+        type: "post",
+        //data: {},
+        url: "./PHP/letter.php"
+    })
+    .done(function(response) {
+        thisLetter = response;  
+        
+        letterContainer.innerHTML = "Litera: " + thisLetter;
+    })
+    
+    buttonLetter.disabled = "disabled";
 
     timeStart();
 }
